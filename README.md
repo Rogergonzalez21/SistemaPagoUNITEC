@@ -28,9 +28,9 @@ $ npm install -g jade
 
 To compile a .jade archive into html, just type into a terminal:
 ```bash
-cd PIBV_Webpage/sources
+cd SistemaPagoUNITEC/sources
 $ jade *.jade -O ../
 ```
-This will compile every .jade into html inside PIBV_Webpage/sources folder to the PIBV_Webpage folder.
+This will compile every .jade into html inside SistemaPagoUNITEC/sources folder to the SistemaPagoUNITEC folder.
 
 And that's it.
