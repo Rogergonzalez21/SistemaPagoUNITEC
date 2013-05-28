@@ -13,7 +13,7 @@ You need to install npm and Jade. Here are the instructions:
 First, clone the repo to your pc:
 
 ```bash
-$ git clone git://github.com/Rogergonzalez21/PIBV_WebPage.git
+$ git clone https://github.com/Rogergonzalez21/SistemaPagoUNITEC.git
 ```
 
 Execute this into a terminal to install npm:
