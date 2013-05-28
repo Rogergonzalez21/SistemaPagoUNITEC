@@ -1,0 +1,32 @@
+html
+  head
+    title Sistema de pago UNITEC
+    include ../includes/css.jade
+  body
+    .metodoPagoHeader
+      h1 Seleccione un método de pago
+    .metodoPagoSeleccionar
+      .row(style='margin-left: auto; margin-right: auto;')
+        .span2
+          a(href='credito.html')
+            h4 Tarjeta de Crédito
+          
+        .span2
+          a(href="debito.html") 
+            h4 Tarjeta de Débito
+          
+        .span2
+          a(href="transferencia.html") 
+            h4 Transferencia 
+          
+      .row(style='margin-left: auto; margin-right: auto;')
+        .span2
+          br
+          img(src="img/credito.png", alt="Tarjeta de Credito")
+        .span2
+          br
+          img(src="img/debito.png", alt="Tarjeta de Debito")
+        .span2
+          br
+          img(src="img/transferencia.png", alt="Transferencia Bancaria")
+
