@@ -4,18 +4,10 @@ html
     include ../includes/css.jade
   body
     .metodoPagoHeader
-      h1 Tarjeta de Credito
+      h1 Tarjeta de Debito
     .metodoPagoCredito
       br
       form.form-horizontal
-        .control-group
-          label.control-label Tipo de tarjeta: <span style="color: rgb(239, 0, 27);">*</span>
-          .controls
-            select.span3(name='tipo_tarjeta')
-              option(value='')
-              option(value='visa') Visa
-              option(value='master') MasterCard
-              option(value='amex') American Express
         .control-group
           label.control-label Numero de Tarjeta: <span style="color: rgb(239, 0, 27);">*</span>
           .controls
@@ -23,7 +15,7 @@ html
         .control-group
           label.control-label Fecha de Vencimiento: <span style="color: rgb(239, 0, 27);">*</span>
           .controls
-            |Mes: &nbsp&nbsp
+            |Dia: &nbsp&nbsp
             select.span1(name='mes_vencimiento')
               option(value='')
               option(value='1') 1
@@ -43,7 +35,7 @@ html
         .control-group
           label.control-label Código de seguridad <span style="color: rgb(239, 0, 27);">*</span>
           .controls
-            input.span1(type='text', name='codigo_tarjeta', maxlength="3")
+            input.span1(type='text', name='codigo_tarjeta', maxlength="4")
 
         p.help-block Todos los compos con <span style="color: rgb(239, 0, 27);">*</span> son obligatorios.
         h3 Total a pagar: *total a pagar*
