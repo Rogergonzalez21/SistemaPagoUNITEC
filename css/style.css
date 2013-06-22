@@ -34,3 +34,9 @@ body {
   height: 550px;
   background-color: #ededed;
 }
+
+.border { 
+  border-width: 1px; 
+  border-style: dotted solid; 
+  border-color: black; 
+} 

@@ -1,0 +1,37 @@
+html
+  head
+    include ../includes/css.jade
+  body
+    .row(style='width:919px;')
+      img(src="img/UNITECLogo.png", alt="LogoUnitec", style='max-width:60%;')
+      .span9
+        | Factura numero: *numero de factura*
+        br
+        .row
+          .span2.border Hemos recibido de
+          .span6.border *nombre*
+        .row
+          .span2.border Fecha
+          .span2.border *fecha*
+          .span2.border Cedula
+          .span2.border *cedula*
+        .row
+          .span2.border Banco
+          .span6.border *banco*
+    br
+    br
+    .row
+      .span9
+        .row
+          .span4.border Descripcion
+          .span4.border Precio
+        .row
+          .span4.border *descripcion*
+          .span4.border *precio*
+        .row
+          .span7.border Total General:
+          .span1.border *total general*
+
+
+
+
