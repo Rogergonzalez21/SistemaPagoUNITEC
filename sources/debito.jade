@@ -7,11 +7,11 @@ html
       h1 Tarjeta de Debito
     .metodoPagoCredito
       br
-      form.form-horizontal
+      form.form-horizontal#data-form
         .control-group
           label.control-label Numero de Tarjeta: <span style="color: rgb(239, 0, 27);">*</span>
           .controls
-            input.span3(type='text', name='numero_tarjeta')
+            input.span3(type='text', name='numero_tarjeta', maxlength='16')
         .control-group
           label.control-label Fecha de Vencimiento: <span style="color: rgb(239, 0, 27);">*</span>
           .controls
@@ -31,11 +31,11 @@ html
         .control-group
           label.control-label Cédula de Identidad <span style="color: rgb(239, 0, 27);">*</span>
           .controls
-            input.span3(type='text', name='cedula_tarjeta')
+            input.span3(type='text', name='cedula_tarjeta', maxlength='8')
         .control-group
           label.control-label Código de seguridad <span style="color: rgb(239, 0, 27);">*</span>
           .controls
-            input.span1(type='text', name='codigo_tarjeta', maxlength="4")
+            input.span1(type='text', name='codigo_tarjeta_debito', maxlength="4")
 
         p.help-block Todos los compos con <span style="color: rgb(239, 0, 27);">*</span> son obligatorios.
         h3 Total a pagar: *total a pagar*
@@ -47,3 +47,4 @@ html
         br 
         br
         a.btn.btn-danger.btn-large(href='index.html') Volver
+        include ../includes/javascript.jade
