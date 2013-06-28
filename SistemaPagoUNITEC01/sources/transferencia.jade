@@ -1,0 +1,58 @@
+html
+  head
+    title Sistema de pago UNITEC - Credito
+    include ../includes/css.jade
+  body
+    .metodoPagoHeader
+      h1 Transferencia Electronica
+    .metodoPagoCredito
+      br
+      form.form-horizontal#data-form
+        .control-group
+          label.control-label Banco: <span style="color: rgb(239, 0, 27);">*</span>
+          .controls
+            select.span3(name='tipo_banco')
+              option(value='')
+              option(value='banesco') Banesco
+              option(value='mercantil') Mercantil
+              option(value='bancoVenezuela') Banco de Venezuela
+        .control-group
+          label.control-label Numero de Transferencia: <span style="color: rgb(239, 0, 27);">*</span>
+          .controls
+            input.span3(type='text', name='numero_transferencia')
+        .control-group
+          label.control-label Fecha de Transferencia: <span style="color: rgb(239, 0, 27);">*</span>
+          .controls
+            |Dia: &nbsp&nbsp
+            select.span1(name='dia_transferencia')
+              option(value='')
+              option(value='1') 1
+            |&nbsp&nbsp
+            |Mes: &nbsp&nbsp
+            select.span1(name='mes_transferencia')
+              option(value='')
+              option(value='1') Enero
+            |Año: &nbsp&nbsp
+            select.span1(name='ano_transferencia')
+              option(value='')
+              option(value='2014') 2014
+        .control-group
+          label.control-label Nombre y apellido: <span style="color: rgb(239, 0, 27);">*</span>
+          .controls
+            input.span3(type='text', name='nombre_tarjeta')
+        .control-group
+          label.control-label Cédula de Identidad <span style="color: rgb(239, 0, 27);">*</span>
+          .controls
+            input.span3(type='text', name='cedula_tarjeta', maxlength='8')
+          br
+          p.help-block Todos los compos con <span style="color: rgb(239, 0, 27);">*</span> son obligatorios.
+          h3 Total a pagar: *total a pagar*
+          .control-group
+            label.control-label Factura:
+            .controls
+              input(type='checkbox', name='factura')
+          button.btn.btn-primary.btn-large Confirmar pago
+          br 
+          br
+          a.btn.btn-danger.btn-large(href='index.html') Volver
+          include ../includes/javascript.jade

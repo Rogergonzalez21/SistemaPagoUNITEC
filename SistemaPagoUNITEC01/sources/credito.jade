@@ -1,0 +1,60 @@
+html
+  head
+    title Sistema de pago UNITEC - Credito
+    include ../includes/css.jade
+
+  body
+    .metodoPagoHeader
+      h1 Tarjeta de Credito
+    .metodoPagoCredito
+      br
+      form.form-horizontal#data-form
+        .control-group
+          label.control-label Tipo de tarjeta: <span style="color: rgb(239, 0, 27);">*</span>
+          .controls
+            select.span3(name='tipo_tarjeta')
+              option(value='')
+              option(value='visa') Visa
+              option(value='master') MasterCard
+              option(value='amex') American Express
+        .control-group
+          label.control-label Numero de Tarjeta: <span style="color: rgb(239, 0, 27);">*</span>
+          .controls
+            input.span3(type='text', name='numero_tarjeta', maxlength='16')
+        .control-group
+          label.control-label Fecha de Vencimiento: <span style="color: rgb(239, 0, 27);">*</span>
+          .controls
+            |Mes: &nbsp&nbsp
+            select.span1(name='mes_vencimiento')
+              option(value='')
+              option(value='1') 1
+            |&nbsp&nbsp
+            |Año: &nbsp&nbsp
+            select.span1(name='ano_vencimiento')
+              option(value='')
+              option(value='2014') 2014
+        .control-group
+          label.control-label Nombre y apellido: <span style="color: rgb(239, 0, 27);">*</span>
+          .controls
+            input.span3(type='text', name='nombre_tarjeta')
+        .control-group
+          label.control-label Cédula de Identidad <span style="color: rgb(239, 0, 27);">*</span>
+          .controls
+            input.span3(type='text', name='cedula_tarjeta', maxlength='8')
+        .control-group
+          label.control-label Código de seguridad <span style="color: rgb(239, 0, 27);">*</span>
+          .controls
+            input.span1(type='text', name='codigo_tarjeta_credito', maxlength="3")
+
+        p.help-block Todos los compos con <span style="color: rgb(239, 0, 27);">*</span> son obligatorios.
+        h3 Total a pagar: *total a pagar*
+        .control-group
+          label.control-label Factura:
+          .controls
+            input(type='checkbox', name='factura')
+        button.btn.btn-primary.btn-large Confirmar pago
+        br 
+        br
+        a.btn.btn-danger.btn-large(href='index.html') Volver
+
+        include ../includes/javascript.jade
